@@ -11,7 +11,7 @@ screen = pygame.display.set_mode((screen_width, screen_height))
 
 # Define square properties
 square_size = 50
-square_color = (255, 0, 0)  # Red color for the square
+square_color = (0, 255, 0)  # Red color for the square
 square_x = (screen_width - square_size) // 2  # Center horizontally
 square_y = (screen_height - square_size) // 2  # Center vertically
 square_speed = 5  # Speed of movement
