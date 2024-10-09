@@ -4,6 +4,12 @@ import sys
 
 # Initialize pygame
 pygame.init()
+pygame.mixer.init()
+
+
+#load song
+eta  = pygame.mixer.music.load("audio/eta.mp3")
+
 
 
 # Set up the screen dimensions
@@ -80,6 +86,9 @@ square_speed = 5  # Speed of movement
 clock = pygame.time.Clock()
 
 
+pygame.mixer.music.play(-1)
+
+
 # Game loop
 while True:
        # Title screen loop
@@ -90,7 +99,10 @@ while True:
                pygame.quit()
                sys.exit()
            if event.type == pygame.MOUSEBUTTONDOWN:
+               pygame.mixer.music.stop()
                game_started = True
+               omg = pygame.mixer.music.load("audio/omg.mp3")
+               pygame.mixer.music.play(-1)
 
 
 
